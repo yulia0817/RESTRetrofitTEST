@@ -1,0 +1,270 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--<TextView-->
+        <!--android:layout_below="@id/scrollView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginTop="23dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="환자정보"-->
+        <!--android:textSize="34sp" />-->
+
+
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="환자코드"
+                    android:text="1111"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtHcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="병원코드"
+                    android:text="Central"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+
+                    android:id="@+id/edtPName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="환자이름"
+                    android:text="test"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+                <RadioGroup
+                    android:id="@+id/radioGen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioFem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Female"
+                        android:checked="true"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioMale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/line1"
+                        android:layout_alignEnd="@+id/line1"
+                        android:layout_weight="1"
+                        android:text="Male"
+                        android:textSize="12sp" />
+
+                </RadioGroup>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPbirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="생년월일"
+                    android:text="19900101"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPBre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="아침식사시간"
+                    android:text="0101"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPlunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="점심식사시간"
+                    android:text="0202"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPDinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="저녁식사시간"
+                    android:text="0303"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPExc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="운동형태"
+                    android:text="dance"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPExcTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="운동시간"
+                    android:text="1111"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPSleep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="취침시간"
+                    android:text="2222"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPWakeup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="기상시간"
+                    android:text="3333"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="참여그룹"
+                    android:text="4444"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPMemo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="메모"
+                    android:text="1234"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtPTestNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="테스트참가횟수"
+                    android:text="1"
+                    android:textSize="12sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_maxCharacters="11"
+                    app:met_singleLineEllipsis="true" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Send"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@android:color/white" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:text="result"-->
+        <!--android:layout_height="wrap_content" />-->
+
+
+    </RelativeLayout>
+</layout>
